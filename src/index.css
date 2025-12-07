@@ -157,6 +157,7 @@ body::before {
     font-weight: 600;
 }
 
+/* Editor Area */
 .editor-area {
     flex: 1;
     background: #0d0d0d;
@@ -169,8 +170,9 @@ body::before {
     border: none;
     outline: none;
     height: 100%;
-    /* Ensure it fills the flex container */
     width: 100%;
+    min-height: 70vh;
+    /* Allow large JSON content */
 }
 
 .editor-area::placeholder {
