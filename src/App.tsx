@@ -54,9 +54,15 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <div className="header-badge">
-          <ArrowRightLeft size={14} />
-          <span>Free Tool</span>
+        <div className="header-top-row" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+          <div className="header-badge">
+            <ArrowRightLeft size={14} />
+            <span>Free Tool</span>
+          </div>
+          <a href="https://github.com/kartikeykumar09/toon-converter" target="_blank" rel="noreferrer" className="header-badge github-badge" style={{ textDecoration: 'none', cursor: 'pointer', background: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+            <img src="https://unpkg.com/simple-icons@v13/icons/github.svg" width="14" height="14" style={{ filter: 'invert(1)', objectFit: 'contain' }} alt="GitHub" />
+            <span>View Source</span>
+          </a>
         </div>
         <h1>
           JSON to TOON Converter
