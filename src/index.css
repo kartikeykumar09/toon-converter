@@ -106,6 +106,8 @@ body::before {
     gap: 1.5rem;
     flex: 1;
     min-height: 0;
+    align-items: stretch;
+    /* Force equal height */
 }
 
 .panel {
@@ -116,6 +118,8 @@ body::before {
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
+    height: 100%;
+    /* Fill the grid area */
 }
 
 .panel:hover {
@@ -129,6 +133,8 @@ body::before {
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.02);
+    flex-shrink: 0;
+    /* Keep header size fixed */
 }
 
 .panel-title {
@@ -162,6 +168,9 @@ body::before {
     resize: none;
     border: none;
     outline: none;
+    height: 100%;
+    /* Ensure it fills the flex container */
+    width: 100%;
 }
 
 .editor-area::placeholder {
