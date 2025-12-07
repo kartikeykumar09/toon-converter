@@ -7,7 +7,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5-purple)](https://vitejs.dev)
 
-![TOON Converter Screenshot](https://via.placeholder.com/800x400/1a1a2e/06b6d4?text=TOON+Converter)
+![TOON Converter Screenshot](assets/screenshot.png)
+
 
 ## ✨ What is TOON?
 
