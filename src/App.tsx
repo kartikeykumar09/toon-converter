@@ -53,21 +53,24 @@ function App() {
 
   return (
     <div className="container">
-      <header>
-        <div>
-          <h1>
-            <ArrowRightLeft className="text-primary" />
-            JSON to TOON Converter
-          </h1>
-          <p className="description">
-            Compress your JSON data for LLM inputs. Format maps to "Token-Oriented Object Notation".
-          </p>
+      <header className="header">
+        <div className="header-badge">
+          <ArrowRightLeft size={14} />
+          <span>Free Tool</span>
         </div>
+        <h1>
+          JSON to TOON Converter
+        </h1>
+        <p>
+          Compress your JSON data directly into Token-Oriented Object Notation.
+          <br />
+          Reduce token usage for LLM prompts by up to 60%.
+        </p>
         
         {reduction > 0 && (
           <div className="savings-badge">
             <span style={{ fontSize: '1.2rem' }}>⚡</span>
-            <span>{reduction}% Reduction in Tokens</span>
+            <span>{reduction}% Reduction</span>
           </div>
         )}
       </header>
@@ -79,6 +82,7 @@ function App() {
             <div className="panel-title">
               <FileJson size={18} className="text-muted-foreground" />
               <span>JSON Input</span>
+              {error && <span style={{ color: 'var(--danger)', fontSize: '0.8rem', marginLeft: '0.5rem' }}>Error in JSON</span>}
             </div>
             <div className="panel-stats">
               {jsonStats.chars} chars (~{jsonStats.tokens} tokens)
@@ -91,11 +95,6 @@ function App() {
             placeholder="Paste your JSON here..."
             spellCheck={false}
           />
-          {error && (
-            <div style={{ padding: '1rem', color: 'var(--danger)', fontSize: '0.9rem', borderTop: '1px solid var(--border)' }}>
-              Error: {error}
-            </div>
-          )}
         </div>
 
         {/* TOON Output */}
@@ -125,6 +124,13 @@ function App() {
           />
         </div>
       </div>
+
+      <footer className="footer">
+        <p>
+          Built by <a href="https://kartikeykumar.com" target="_blank" rel="noopener noreferrer">Kartikey Kumar</a> · 
+          More tools at <a href="https://kartikeykumar.com/tools" target="_blank" rel="noopener noreferrer">kartikeykumar.com/tools</a>
+        </p>
+      </footer>
     </div>
   );
 }
